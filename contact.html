@@ -1,37 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Hilltop Babies</title>
+    <title>Yhteys | Hilltop Babies</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <header>
-        <h1>Hilltop Babies</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="dolls.html">Dolls</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <button data-lang="en">EN</button>
-            <button data-lang="fi">FI</button>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fi">FI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="about.html">Tietoa</a></li>
+                    <li><a href="contact.html" class="active">Yhteys</a></li>
+                    <li><a href="dolls.html">Nuket</a></li>
+                    <li><a href="events.html">Tapahtumat</a></li>
+                    <li><a href="blog.html">Blogi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Contact page content goes here -->
-    </main>
+    <!-- Contact Hero Section -->
+    <section class="hero" style="padding: 40px 0 30px; display: flex; justify-content: center; align-items: center; text-align: center;">
+        <p style="font-size: 1.1rem; color: #666666; max-width: 500px; font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0;" data-fi="Haluatko tilata oman nukkevauvan tai kysyä lisätietoja?<br>Täytä lomake, niin vastaan mahdollisimman pian!" data-en="Want to order your own doll baby or ask for more information?<br>Fill out the form and I'll get back to you as soon as possible!">Haluatko tilata oman nukkevauvan tai kysyä lisätietoja?<br>Täytä lomake, niin vastaan mahdollisimman pian!</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Hilltop Babies. All rights reserved.</p>
+    <!-- Contact Form Section -->
+    <section class="features" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" data-fi="Ota yhteyttä" data-en="Get in Touch">Ota yhteyttä</h2>
+            <div class="feature-card" style="max-width: 500px; margin: 40px auto 0; padding: 40px;">
+                <form class="contact-form" style="width: 100%;">
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; margin-bottom: 5px; font-size: 0.9rem; font-family: 'Inter', sans-serif; color: var(--dark-brown); text-align: left;" data-fi="Nimi" data-en="Name">Nimi</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.95rem; box-sizing: border-box;">
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-size: 0.9rem; font-family: 'Inter', sans-serif; color: var(--dark-brown); text-align: left;" data-fi="Sähköposti" data-en="Email">Sähköposti</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.95rem; box-sizing: border-box;">
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="message" style="display: block; margin-bottom: 5px; font-size: 0.9rem; font-family: 'Inter', sans-serif; color: var(--dark-brown); text-align: left;" data-fi="Viesti" data-en="Message">Viesti</label>
+                        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.95rem; resize: vertical; box-sizing: border-box;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 30px; font-size: 0.95rem;" data-fi="Lähetä" data-en="Send">Lähetä</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="footer-logo">
+                    <p class="email" data-fi="Sähköposti: info@hilltopbabies.fi" data-en="Email: info@hilltopbabies.fi">Sähköposti: info@hilltopbabies.fi</p>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fi="Seuraa somessa" data-en="Follow on social media">Seuraa somessa</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Hilltop Babies. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

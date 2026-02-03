@@ -1,37 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Hilltop Babies</title>
+    <title>Tietoa | Hilltop Babies</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
-    <header>
-        <h1>Hilltop Babies</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="dolls.html">Dolls</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <button data-lang="en">EN</button>
-            <button data-lang="fi">FI</button>
+<body class="about-page">
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fi">FI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="about.html" class="active">Tietoa</a></li>
+                    <li><a href="contact.html">Yhteys</a></li>
+                    <li><a href="dolls.html">Nuket</a></li>
+                    <li><a href="events.html">Tapahtumat</a></li>
+                    <li><a href="blog.html">Blogi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- About page content goes here -->
-    </main>
+    <!-- Reborn Dolls Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" style="font-size: 1.8rem;" data-fi="Reborn-nukeista" data-en="About Reborn Dolls">Reborn-nukeista</h2>
+                <p class="hero-text" data-fi="Reborn-nuket ovat käsin valmistettuja, aidon näköisiä vauvanukkeja. Ne sopivat keräilijöille, harrastajille tai kaikille, jotka haluavat realistisen nukkevauvan. Nukkeja voidaan käyttää myös valokuvauksessa, teatteri- ja elokuvatuotannoissa sekä ammatillisissa ympäristöissä, kuten sairaaloissa ja koulutuksessa." data-en="Reborn dolls are hand-crafted, lifelike baby dolls. They are perfect for collectors, hobbyists, or anyone who wants a realistic doll. They can also be used in photography, theater and film productions, or professional settings such as hospitals and training.">Reborn-nuket ovat käsin valmistettuja, aidon näköisiä vauvanukkeja. Ne sopivat keräilijöille, harrastajille tai kaikille, jotka haluavat realistisen nukkevauvan. Nukkeja voidaan käyttää myös valokuvauksessa, teatteri- ja elokuvatuotannoissa sekä ammatillisissa ympäristöissä, kuten sairaaloissa ja koulutuksessa.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/reborn-nukke.jpg" alt="Reborn-nukke" class="hero-img">
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Hilltop Babies. All rights reserved.</p>
+    <!-- Artist Section -->
+    <section class="hero" style="background-color: var(--primary-beige);">
+        <div class="container">
+            <div class="hero-image">
+                <img src="images/reborn-taiteilija.jpeg" alt="Reborn-taiteilija" class="hero-img">
+            </div>
+            <div class="hero-content">
+                <h2 class="hero-title" style="font-size: 1.8rem;" data-fi="Taiteilijasta" data-en="About the Artist">Taiteilijasta</h2>
+                <p class="hero-text" data-fi="Olen Katerina Mäenpää, kahden pienen pojan äiti ja reborn-nukketaiteilija. Olen valmistanut reborn-nukkeja vuodesta 2020 lähtien, ja työssäni korostuvat tarkka yksityiskohtien huomiointi sekä realistinen lopputulos. Käytän ilmakuivuvia maaleja, pehmeää mohairia ja huolellisesti valittuja materiaaleja luodakseni nukkeja, jotka näyttävät ja tuntuvat mahdollisimman aidolta. Jokainen nukke syntyy huolella, kärsivällisesti ja rakkaudella tätä käsityötä kohtaan." data-en="I'm Katerina Mäenpää, a mom of two little boys and a reborn artist. I've been creating reborn dolls since 2020, guided by a strong attention to detail and a passion for realism. I use air-dry paints, soft mohair hair, and carefully selected materials to create babies that look and feel as lifelike as possible. Each doll is made with care, patience, and love for this craft.">Olen Katerina Mäenpää, kahden pienen pojan äiti ja reborn-nukketaiteilija. Olen valmistanut reborn-nukkeja vuodesta 2020 lähtien, ja työssäni korostuvat tarkka yksityiskohtien huomiointi sekä realistinen lopputulos. Käytän ilmakuivuvia maaleja, pehmeää mohairia ja huolellisesti valittuja materiaaleja luodakseni nukkeja, jotka näyttävät ja tuntuvat mahdollisimman aidolta. Jokainen nukke syntyy huolella, kärsivällisesti ja rakkaudella tätä käsityötä kohtaan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-fi="Kiinnostuitko?" data-en="Are you interested?">Kiinnostuitko?</h2>
+                <p data-fi="Haluatko lisätietoja reborn-nukeista tai harkitsetko oman nukkivauvan tilaamista? Ota rohkeasti yhteyttä - autan mielelläni!" data-en="Would you like more information about reborn dolls or are you considering ordering your own doll baby? Feel free to contact me - I'll be happy to help!">Haluatko lisätietoja reborn-nukeista tai harkitsetko oman nukkivauvan tilaamista? Ota rohkeasti yhteyttä - autan mielelläni!</p>
+                <a href="contact.html" class="btn btn-primary" data-fi="Ota yhteyttä" data-en="Contact Me">Ota yhteyttä</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="footer-logo">
+                    <p class="email" data-fi="Sähköposti: info@hilltopbabies.fi" data-en="Email: info@hilltopbabies.fi">Sähköposti: info@hilltopbabies.fi</p>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fi="Seuraa somessa" data-en="Follow on social media">Seuraa somessa</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Hilltop Babies. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

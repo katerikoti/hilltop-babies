@@ -1,39 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Hilltop Babies</title>
+    <title>Hilltop Babies | Reborn-nukkeja</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <header>
-        <h1>Hilltop Babies</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="dolls.html">Dolls</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <button data-lang="en">EN</button>
-            <button data-lang="fi">FI</button>
+    <!-- Language switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fi">FI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Koti</a></li>
+                    <li><a href="about.html">Tietoa</a></li>
+                    <li><a href="contact.html">Yhteys</a></li>
+                    <li><a href="dolls.html">Nuket</a></li>
+                    <li><a href="events.html">Tapahtumat</a></li>
+                    <li><a href="blog.html">Blogi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Home page content goes here -->
-    </main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-fi="Hilltop Babies" data-en="Hilltop Babies">Hilltop Babies</h1>
+                <p class="hero-subtitle" data-fi="Rakkaudella käsintehtyjä reborn-nukkeja" data-en="Lovingly handmade reborn dolls">Rakkaudella käsintehtyjä reborn-nukkeja</p>
+                <p class="hero-text" data-fi="Tervetuloa Suomessa toimivan reborn-nukketaiteilijan verkkosivuille. Jokainen nukke on ainutlaatuinen teos, luotu mahdollisimman aidon näköiseksi." data-en="Welcome to the website of a Finnish reborn doll artist. Each doll is a unique masterpiece, created to look as authentic as possible.">Tervetuloa Suomessa toimivan reborn-nukketaiteilijan verkkosivuille. Jokainen nukke on ainutlaatuinen teos, luotu mahdollisimman aidon näköiseksi.</p>
+                <div class="hero-buttons">
+                    <a href="dolls.html" class="btn btn-primary" data-fi="Katso nuket" data-en="View Dolls">Katso nuket</a>
+                    <a href="about.html" class="btn btn-secondary" data-fi="Lue lisää" data-en="Learn More">Lue lisää</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/doll-hero.jpg" alt="Realistinen reborn-nukkevauva" class="hero-img">
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Hilltop Babies. All rights reserved.</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-fi="Miksi valita reborn-nukke?" data-en="Why Choose a Reborn Doll?">Miksi valita reborn-nukke?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 data-fi="Käsintehty" data-en="Handmade">Käsintehty</h3>
+                    <p data-fi="Jokainen nukke on ainutlaatuinen, tarkasti tehty taideteos." data-en="Each doll is a unique, meticulously crafted work of art.">Jokainen nukke on ainutlaatuinen, tarkasti tehty taideteos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-fi="Aito" data-en="Authentic">Aito</h3>
+                    <p data-fi="Käytän vain aitoja aihioita ja laadukkaita materiaaleja nukkejen valmistuksessa." data-en="I use only authentic blanks and high-quality materials in doll making.">Käytän vain aitoja aihioita ja laadukkaita materiaaleja nukkejen valmistuksessa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-fi="Oma" data-en="Custom">Oma</h3>
+                    <p data-fi="Voit tilata nuken omien toiveidesi mukaan." data-en="You can order a doll according to your own wishes.">Voit tilata nuken omien toiveidesi mukaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-fi="Oletko kiinnostunut omasta reborn-nukestasi?" data-en="Interested in your own reborn doll?">Oletko kiinnostunut omasta reborn-nukestasi?</h2>
+                <p data-fi="Ota yhteyttä ja keskustellaan unelmiesi nukesta." data-en="Get in touch and let's discuss your dream doll.">Ota yhteyttä ja keskustellaan unelmiesi nukesta.</p>
+                <a href="contact.html" class="btn btn-primary" data-fi="Ota yhteyttä" data-en="Contact Me">Ota yhteyttä</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="footer-logo">
+                    <p class="email" data-fi="Sähköposti: info@hilltopbabies.fi" data-en="Email: info@hilltopbabies.fi">Sähköposti: info@hilltopbabies.fi</p>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fi="Seuraa somessa" data-en="Follow on social media">Seuraa somessa</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Hilltop Babies. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></p>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
