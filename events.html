@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Events-only fallback so layout stays correct even with cached CSS -->
+    <style>
+        .events-grid { grid-template-columns: repeat(2, 1fr); }
+        @media (max-width: 768px) { .events-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body class="events-page">
     <div class="language-switcher">
