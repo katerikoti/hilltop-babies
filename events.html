@@ -1,37 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - Hilltop Babies</title>
+    <title>Tapahtumat | Hilltop Babies</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
-    <header>
-        <h1>Hilltop Babies</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="dolls.html">Dolls</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <button data-lang="en">EN</button>
-            <button data-lang="fi">FI</button>
+<body class="events-page">
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fi">FI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="about.html">Tietoa</a></li>
+                    <li><a href="contact.html">Yhteys</a></li>
+                    <li><a href="dolls.html">Nuket</a></li>
+                    <li><a href="events.html" class="active">Tapahtumat</a></li>
+                    <li><a href="blog.html">Blogi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Events page content goes here -->
-    </main>
+    <!-- Events Page Hero -->
+    <section class="hero" style="padding: 40px 0 30px; display: flex; justify-content: center; align-items: center; text-align: center;">
+        <p style="font-size: 1.1rem; color: #666666; max-width: 500px; font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0;" data-fi="Tule tapaamaan minua tapahtumissa!<br>Alla kaksi esimerkkitapahtumaa." data-en="Come meet me at events!<br>Here are two sample events.">Tule tapaamaan minua tapahtumissa!<br>Alla kaksi esimerkkitapahtumaa.</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Hilltop Babies. All rights reserved.</p>
+    <!-- Events Section -->
+    <section class="features" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" data-fi="Tulevat tapahtumat" data-en="Upcoming events">Tulevat tapahtumat</h2>
+
+            <div class="features-grid events-grid" style="margin-top: 40px;">
+                <div class="feature-card">
+                    <h3 data-fi="Kevätmarkkinat" data-en="Spring Market">Kevätmarkkinat</h3>
+                    <p style="color: var(--medium-brown); font-weight: 500; margin: 0 0 12px;" data-fi="Päivämäärä: 15.3.2026" data-en="Date: Mar 15, 2026">Päivämäärä: 15.3.2026</p>
+                    <p data-fi="Pieni esittelypiste, jossa voit nähdä nukkeja livenä ja kysyä tilaustöistä." data-en="A small booth where you can see dolls in person and ask about custom orders.">Pieni esittelypiste, jossa voit nähdä nukkeja livenä ja kysyä tilaustöistä.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3 data-fi="Nukkeklinikka &amp; maalausdemo" data-en="Doll Clinic &amp; Painting Demo">Nukkeklinikka &amp; maalausdemo</h3>
+                    <p style="color: var(--medium-brown); font-weight: 500; margin: 0 0 12px;" data-fi="Päivämäärä: 28.6.2026" data-en="Date: Jun 28, 2026">Päivämäärä: 28.6.2026</p>
+                    <p data-fi="Lyhyt demo nukkejen maalaus- ja viimeistelyvaiheista sekä vinkkejä materiaalivalintoihin." data-en="A short demo of painting and finishing steps, plus tips on choosing materials.">Lyhyt demo nukkejen maalaus- ja viimeistelyvaiheista sekä vinkkejä materiaalivalintoihin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="footer-logo">
+                    <p class="email" data-fi="Sähköposti: info@hilltopbabies.fi" data-en="Email: info@hilltopbabies.fi">Sähköposti: info@hilltopbabies.fi</p>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fi="Seuraa somessa" data-en="Follow on social media">Seuraa somessa</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Hilltop Babies. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

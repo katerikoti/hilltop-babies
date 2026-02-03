@@ -1,37 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Hilltop Babies</title>
+    <title>Blogi | Hilltop Babies</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
-    <header>
-        <h1>Hilltop Babies</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="dolls.html">Dolls</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <button data-lang="en">EN</button>
-            <button data-lang="fi">FI</button>
+<body class="blog-page">
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fi">FI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="about.html">Tietoa</a></li>
+                    <li><a href="contact.html">Yhteys</a></li>
+                    <li><a href="dolls.html">Nuket</a></li>
+                    <li><a href="events.html">Tapahtumat</a></li>
+                    <li><a href="blog.html" class="active">Blogi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Blog page content goes here -->
-    </main>
+    <!-- Blog Page Hero -->
+    <section class="hero" style="padding: 40px 0 30px; display: flex; justify-content: center; align-items: center; text-align: center;">
+        <p style="font-size: 1.1rem; color: #666666; max-width: 500px; font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0;" data-fi="Kurkaa kulissien taakse!<br>Täältä löydät ajatuksia ja pieniä päivityksiä nukkejen tekemisestä." data-en="Peek behind the scenes!<br>Here you'll find thoughts and small updates about doll making.">Kurkaa kulissien taakse!<br>Täältä löydät ajatuksia ja pieniä päivityksiä nukkejen tekemisestä.</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Hilltop Babies. All rights reserved.</p>
+    <!-- Blog Posts -->
+    <section class="features" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" data-fi="Uusimmat kirjoitukset" data-en="Latest posts">Uusimmat kirjoitukset</h2>
+
+            <div class="features-grid" style="margin-top: 40px;">
+                <div class="feature-card">
+                    <h3 data-fi="Miten reborn-nukke syntyy?" data-en="How a reborn doll is made">Miten reborn-nukke syntyy?</h3>
+                    <p style="color: var(--medium-brown); font-weight: 500; margin: 0 0 12px;" data-fi="3.2.2026" data-en="Feb 3, 2026">3.2.2026</p>
+                    <p data-fi="Lyhyt katsaus tärkeimpiin vaiheisiin: maalaus, hiukset ja viimeistely." data-en="A quick look at the key steps: painting, hair, and finishing.">Lyhyt katsaus tärkeimpiin vaiheisiin: maalaus, hiukset ja viimeistely.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3 data-fi="Materiaalit: mitä ja miksi?" data-en="Materials: what and why">Materiaalit: mitä ja miksi?</h3>
+                    <p style="color: var(--medium-brown); font-weight: 500; margin: 0 0 12px;" data-fi="20.1.2026" data-en="Jan 20, 2026">20.1.2026</p>
+                    <p data-fi="Kerron lyhyesti, miksi valitsen tietyt maalit ja materiaalit realistiseen lopputulokseen." data-en="A short note on why I choose certain paints and materials for a realistic result.">Kerron lyhyesti, miksi valitsen tietyt maalit ja materiaalit realistiseen lopputulokseen.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3 data-fi="Tilaustyö: mitä kannattaa miettiä" data-en="Custom order: what to consider">Tilaustyö: mitä kannattaa miettiä</h3>
+                    <p style="color: var(--medium-brown); font-weight: 500; margin: 0 0 12px;" data-fi="8.1.2026" data-en="Jan 8, 2026">8.1.2026</p>
+                    <p data-fi="Vinkit toiveiden kertomiseen: koko, värit, hiukset ja lisävarusteet." data-en="Tips for sharing your wishes: size, colors, hair, and accessories.">Vinkit toiveiden kertomiseen: koko, värit, hiukset ja lisävarusteet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-fi="Haluatko kuulla lisää?" data-en="Want to know more?">Haluatko kuulla lisää?</h2>
+                <p data-fi="Jos jokin postaus herätti kysymyksiä, laita viestiä niin jutellaan!" data-en="If a post sparked questions, send a message and let's chat!">Jos jokin postaus herätti kysymyksiä, laita viestiä niin jutellaan!</p>
+                <a href="contact.html" class="btn btn-primary" data-fi="Ota yhteyttä" data-en="Contact Me">Ota yhteyttä</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="footer-logo">
+                    <p class="email" data-fi="Sähköposti: info@hilltopbabies.fi" data-en="Email: info@hilltopbabies.fi">Sähköposti: info@hilltopbabies.fi</p>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fi="Seuraa somessa" data-en="Follow on social media">Seuraa somessa</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Hilltop Babies. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
