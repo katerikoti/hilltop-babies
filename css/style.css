@@ -1161,6 +1161,41 @@ section.features:not(.dolls-section) .feature-card:has(.feature-icon) {
 }
 
 /* Dolls Page Styles */
+.dolls-section .feature-card.sold {
+    position: relative;
+}
+
+/* Fade only the card contents (keeps layout identical) */
+.dolls-section .feature-card.sold > * {
+    opacity: 0.55;
+}
+
+/* Subtle overlay that does not block clicks */
+.dolls-section .feature-card.sold::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+/* SOLD badge */
+.dolls-section .feature-card.sold::after {
+    content: "SOLD";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 10px;
+    background: rgba(92, 74, 55, 0.92);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    pointer-events: none;
+}
+
 .dolls-section .doll-image-carousel {
     position: relative;
     width: 100%;
