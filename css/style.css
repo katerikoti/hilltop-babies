@@ -1161,6 +1161,65 @@ section.features:not(.dolls-section) .feature-card:has(.feature-icon) {
 }
 
 /* Dolls Page Styles */
+.dolls-section .doll-image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    background-color: var(--secondary-beige);
+    border-radius: 8px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.dolls-section .doll-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+.dolls-section .doll-image.active {
+    opacity: 1;
+}
+
+.dolls-section .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.dolls-section .carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.dolls-section .carousel-btn.prev {
+    left: 10px;
+}
+
+.dolls-section .carousel-btn.next {
+    right: 10px;
+}
+
+.dolls-section .carousel-btn i {
+    color: var(--dark-brown);
+    font-size: 1rem;
+}
+
 .doll-image-placeholder {
     width: 100%;
     height: 250px;

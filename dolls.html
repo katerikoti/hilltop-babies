@@ -52,9 +52,16 @@
             <div class="features-grid">
                 <!-- Doll Card 1 -->
                 <div class="feature-card">
-                    <div class="doll-image-placeholder">
-                        <i class="fas fa-image" style="font-size: 3rem; color: var(--medium-brown);"></i>
-                        <p style="margin-top: 10px; color: var(--medium-brown); font-size: 0.9rem;" data-fi="Kuvia tulossa pian" data-en="Photos coming soon">Kuvia tulossa pian</p>
+                    <div class="doll-image-carousel" aria-label="Nukke 1 kuvagalleria">
+                        <button class="carousel-btn prev" type="button" aria-label="Edellinen kuva">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="carousel-btn next" type="button" aria-label="Seuraava kuva">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <img class="doll-image active" src="images/dolls/doll1.1.jpg" alt="Nukke 1 - kuva 1" loading="lazy" decoding="async">
+                        <img class="doll-image" src="images/dolls/doll1.2.jpg" alt="Nukke 1 - kuva 2" loading="lazy" decoding="async">
+                        <img class="doll-image" src="images/dolls/doll1.3.jpg" alt="Nukke 1 - kuva 3" loading="lazy" decoding="async">
                     </div>
                     <h3 class="doll-title" data-fi="Nukke 1" data-en="Doll 1">Nukke 1</h3>
                     <p class="doll-subtitle" data-fi="Käsintehty" data-en="Handmade">Käsintehty</p>

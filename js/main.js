@@ -88,4 +88,28 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.remove('active');
         }
     });
+
+    // Dolls page: simple per-card slideshow (used for Nukke 1)
+    const carousels = document.querySelectorAll('.doll-image-carousel');
+    carousels.forEach(carousel => {
+        const images = Array.from(carousel.querySelectorAll('.doll-image'));
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+        if (images.length === 0) return;
+
+        let currentIndex = images.findIndex(img => img.classList.contains('active'));
+        if (currentIndex < 0) currentIndex = 0;
+
+        function showSlide(nextIndex) {
+            const total = images.length;
+            currentIndex = ((nextIndex % total) + total) % total;
+            images.forEach((img, idx) => img.classList.toggle('active', idx === currentIndex));
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+
+        showSlide(currentIndex);
+    });
 });
