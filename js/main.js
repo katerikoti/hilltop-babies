@@ -112,4 +112,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
         showSlide(currentIndex);
     });
+
+    // Blog page: Auto-update preview text and images from blog post content
+    if (document.querySelector('.blog-page')) {
+        const blogCards = document.querySelectorAll('[data-post-url]');
+        
+        blogCards.forEach(async (card) => {
+            const postUrl = card.getAttribute('data-post-url');
+            const previewElement = card.querySelector('.blog-preview');
+            const imageElement = card.querySelector('.blog-preview-image');
+            
+            if (!postUrl) return;
+            
+            try {
+                const response = await fetch(postUrl);
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Get first paragraph from post content
+                const contentDiv = doc.querySelector('.post-content');
+                if (contentDiv && previewElement) {
+                    const firstPara = contentDiv.querySelector('p');
+                    if (firstPara) {
+                        const fiFull = firstPara.getAttribute('data-fi') || firstPara.textContent;
+                        const enFull = firstPara.getAttribute('data-en') || firstPara.textContent;
+                        
+                        // Truncate to ~100 chars for preview
+                        const fiPreview = fiFull.length > 100 ? fiFull.substring(0, 100) + '...' : fiFull;
+                        const enPreview = enFull.length > 100 ? enFull.substring(0, 100) + '...' : enFull;
+                        
+                        previewElement.setAttribute('data-fi', fiPreview);
+                        previewElement.setAttribute('data-en', enPreview);
+                        
+                        // Update visible text based on current language
+                        const currentLang = localStorage.getItem('selectedLanguage') || 'fi';
+                        previewElement.textContent = currentLang === 'fi' ? fiPreview : enPreview;
+                    }
+                }
+                
+                // Get image from post content
+                if (contentDiv && imageElement) {
+                    const postImage = contentDiv.querySelector('img');
+                    if (postImage) {
+                        imageElement.src = postImage.src;
+                        imageElement.alt = postImage.alt || 'Blog post image';
+                    }
+                }
+            } catch (error) {
+                console.error(`Failed to fetch preview for ${postUrl}:`, error);
+            }
+        });
+    }
 });
