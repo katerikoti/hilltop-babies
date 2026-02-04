@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiaalit: mitä ja miksi? | Hilltop Babies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fi">FI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="logo">
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="about.html">Tietoa</a></li>
+                    <li><a href="contact.html">Yhteys</a></li>
+                    <li><a href="dolls.html">Nuket</a></li>
+                    <li><a href="events.html">Tapahtumat</a></li>
+                    <li><a href="blog.html" class="active">Blogi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <article class="blog-post">
+        <div class="container" style="max-width: 800px;">
+            <!-- Back to Blog Link -->
+            <a href="blog.html" class="back-link" style="display: inline-block; margin: 40px 0 20px; color: var(--medium-brown); text-decoration: none; font-weight: 500;">
+                <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                <span data-fi="Takaisin blogiin" data-en="Back to blog">Takaisin blogiin</span>
+            </a>
+
+            <!-- Post Header -->
+            <header class="post-header" style="margin-bottom: 40px;">
+                <h1 class="post-title" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--dark-brown); margin-bottom: 15px;" data-fi="Syksyn nukketreffit" data-en="Autumn Doll Meetup">Syksyn nukketreffit</h1>
+                <p class="post-date" style="color: var(--medium-brown); font-weight: 500; font-size: 1rem;" data-fi="25.11.2025" data-en="Nov 25, 2025">25.11.2025</p>
+            </header>
+
+            <!-- Post Content -->
+            <div class="post-content" style="line-height: 1.8; color: var(--text-dark);">
+                <p data-fi="Marraskuussa tavattiin Joensuun nukkeharrastajien kanssa. Mukavaa aina välillä tavata, jutella ja kahvitella. Samalla voi nähdä ja sylitellä muiden nukkeja ja katsoa muiden artistien työtä." data-en="In November, we met with Joensuu doll enthusiasts. It's always nice to meet, chat, and have coffee together. At the same time, you can see and hold others' dolls and view other artists' work.">Marraskuussa tavattiin Joensuun nukkeharrastajien kanssa. Mukavaa aina välillä tavata, jutella ja kahvitella. Samalla voi nähdä ja sylitellä muiden nukkeja ja katsoa muiden artistien työtä.</p>
+
+                <img src="images/blogposts/post2.JPG" alt="Nukketreffit" style="width: 100%; max-width: 500px; margin: 30px auto 0; display: block; border-radius: 10px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Hilltop Babies logo" class="footer-logo">
+                    <p class="email" data-fi="Sähköposti: info@hilltopbabies.fi" data-en="Email: info@hilltopbabies.fi">Sähköposti: info@hilltopbabies.fi</p>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fi="Seuraa somessa" data-en="Follow on social media">Seuraa somessa</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Hilltop Babies. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
