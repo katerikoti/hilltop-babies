@@ -464,6 +464,11 @@ section.features:not(.dolls-section) .feature-card:has(.feature-icon) {
         text-align: center;
     }
 
+    .hero-image {
+        justify-self: center;
+        margin: 0 auto;
+    }
+
     .hero-text {
         margin: 0 auto 30px;
     }
