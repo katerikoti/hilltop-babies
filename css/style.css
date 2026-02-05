@@ -320,7 +320,7 @@ body:has(.dolls-section) .hero p {
 }
 
 /* Home page: keep the 3 icon feature cards as smaller squares */
-section.features:not(.dolls-section) .features-grid {
+section.features:not(.dolls-section) .features-grid:has(.feature-icon) {
     justify-items: center;
 }
 
